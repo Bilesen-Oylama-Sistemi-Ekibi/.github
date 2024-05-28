@@ -10,77 +10,31 @@ Bu proje, gelecekteki ortak çalışmalarda kullanılacak bir ortam geliştirmey
 Stajyerlerin kayıt olabileceği, yöneticiden onay alıp kaydolduktan sonra anonim olarak bileşen yükleyip, anonim olarak oy kullanabilecekleri bir platform.
 
 ## Genel Özellikler
-```bash
-Back-End
-├── Hesap Sistemi
-│   ├── Kullanıcı Yönetimi
-│   ├── Kayıt ve Giriş Sistemi
-│   └── Admin onayı ile kullanıcı aktivasyonu
-│
-├── Bileşen Sistemi
-│   ├── Bileşen Yükleme
-│   ├── Kullanıcıların bileşen yükleyebileceği bir form
-│   └── Bileşenlerin kategoriye göre ayrılması
-│
-├── Oylama Sistemi
-│   ├── Anonim oylama
-│   └── Her kullanıcı bir bileşene en fazla bir oy verebilecek
-│
-└── Yönetici Paneli
-    ├── Kullanıcıları onaylama/reddetme
-    └── Bileşenleri yönetme ve onaylama
+### Backend için yapılması gerekenler:
+1. Kullanıcı hesabı olacak ve hesabın iki türü olacak (üye, yönetici).
+2. Hesap bir yönetici tarafından onaylanana kadar herhangi bir işlem yapamayacak. (oylama, bileşen yükleme, bileşen görüntüleme gibi)
 
-Front-End
-├── Ana Sayfa
-│   ├── Proje hakkında genel bilgi
-│   └── Kayıt ve giriş bağlantıları
-│
-├── Kullanıcı Sayfası
-│   ├── Bileşen Yükleme
-│   ├── Bileşenlerin Listesi
-│   └── Bileşenlerin kategoriye göre ayrılması
-│
-├── Oylama Sistemi
-│   ├── Anonim oylama
-│   └── Her kullanıcı bir bileşene en fazla bir oy verebilecek
-│
-└── Yönetici Paneli
-    ├── Kullanıcıları onaylama/reddetme
-    └── Bileşenleri yönetme ve onaylama
+3. Bileşen sistemi olacak.
+  - Onaylı kullanıcıların yükledikleri bileşenler anonim olarak görünecek.
+  - Bileşenler kategoriye göre ayrılabilecek.
 
-Sayfalar (bunları yukarıdaki gibi şekillendirmeye üşendim)
+4. Oylama sistemi olacak.
+  - Kullanıcıların verdiği oylar anonim olarak gözükecek.
+  - Kullanıcılar bir bileşene sadece bir defa oy verebilecek.
 
-Anasayfa
-Projenin tanıtımı ve genel bilgi
-Kayıt ve giriş bağlantıları
-Kayıt sayfası
+5. Eğer kullanıcı bir yöneticiyse,
+  - Kullanıcıları onaylayıp/reddetme yetkisine sahip olacak.
+  - Bileşenleri yönetip, onaylayabilecek.
 
-Yeni kullanıcıların kayıt olabileceği form
-Admin onayı sonrası aktivasyon
-Giriş Sayfası
+Backendde Django, Frontendde React kullanacağımız için
+Django ile React arasındaki iletişimi REST API sayesinde
+yapacağız. Eğer ki bu terimlere yabancıysanız
+"django rest api", "django crud api" diye aratabilirsiniz.
 
-Mevcut kullanıcıların giriş yapabileceği form
-Bileşen yükleme sayfası
-
-Kullanıcılarınm bileşen yükleyebileceği form
-Bileşen kategorilerinin seçimi
-Bileşen listesi sayfası
-
-Tüm bileşenlerin listelendiği sayfa
-Kullanıcıların bileşenleri oylayabileceği arayüz
-Oylama sayfası
-
-Kullanıcıların bileşenleri anonim olarak oylayabileceği sayfa
-Sonuçlar sayfası
-
-Oylama sonuçlarının ve en çok oy alan bileşenlerin listelendiği sayfa
-Kullanıcı profil sayfası
-
-Kullanıcıların profil bilgilerini görebileceği ve düzenleyebileceği sayfa
-Yönetici paneli
-
-Kullanıcıları onaylama/reddetme
-Yüklenen bileşenleri onaylama/reddetme
-Oylama sonuçlarını yönetme
-Hakkında Sayfası
-```
+### Frontend için yapılması gereken sayfalar:
+1. Anasayfa (Projenin tanıtımı, genel bilgi, kayıt ve giriş bağlantıları)
+2. Kayıt ve Giriş sayfaları (ayrı bir sayfa yapmak yerine anasayfada modal olarak çıkarılabilir.)
+3. Kullanıcının kendi profilini görüntüleyip, bilgilerini düzenleyebileceği sayfa
+4. Bileşenlerin listelendiği sayfa (kategori, oy sayısı gibi özelliklere göre sıralanıp filtrelenebilecek. bileşenlere de buradan oy verilecek.)
+5. Bileşen yükleme sayfası (ayrı bir sayfa yapmak yerine listeleme sayfasında modal olarak çıkarılabilir.)
+Eğer yönetici hesabıysa bileşen listeleme menüsünde ek bir seçenekle bileşeni onaylayıp silebilecek. Navigasyon çubuğunda ek bir seçenek olacak ve yönetici o seçeneğe bastığında onaylama bekleyen kullanıcıları görüntüleyebilecek.
