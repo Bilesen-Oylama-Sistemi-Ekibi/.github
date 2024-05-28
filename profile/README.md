@@ -15,16 +15,16 @@ Stajyerlerin kayıt olabileceği, yöneticiden onay alıp kaydolduktan sonra ano
 2. Hesap bir yönetici tarafından onaylanana kadar herhangi bir işlem yapamayacak. (oylama, bileşen yükleme, bileşen görüntüleme gibi)
 
 3. Bileşen sistemi olacak.
-   _ Onaylı kullanıcıların yükledikleri bileşenler anonim olarak görünecek.
-   _ Bileşenler kategoriye göre ayrılabilecek.
+   - Onaylı kullanıcıların yükledikleri bileşenler anonim olarak görünecek.
+   - Bileşenler kategoriye göre ayrılabilecek.
 
 4. Oylama sistemi olacak.
-   _ Kullanıcıların verdiği oylar anonim olarak gözükecek.
-   _ Kullanıcılar bir bileşene sadece bir defa oy verebilecek.
+   - Kullanıcıların verdiği oylar anonim olarak gözükecek.
+   - Kullanıcılar bir bileşene sadece bir defa oy verebilecek.
 
 5. Eğer kullanıcı bir yöneticiyse,
-   _ Kullanıcıları onaylayıp/reddetme yetkisine sahip olacak.
-   _ Bileşenleri yönetip, onaylayabilecek.
+   - Kullanıcıları onaylayıp/reddetme yetkisine sahip olacak.
+   - Bileşenleri yönetip, onaylayabilecek.
 
 > [!IMPORTANT]
 > Backendde Django, Frontendde React kullanacağımız için
