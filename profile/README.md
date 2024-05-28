@@ -11,18 +11,19 @@ Stajyerlerin kayıt olabileceği, yöneticiden onay alıp kaydolduktan sonra ano
 
 ## Genel Özellikler
 ### Backend için yapılması gerekenler:
-1. Kullanıcı hesabı olacak ve hesabın iki türü olacak (üye, yönetici).
-2. Hesap bir yönetici tarafından onaylanana kadar herhangi bir işlem yapamayacak. (oylama, bileşen yükleme, bileşen görüntüleme gibi)
+1. Hesap sistemi olacak.
+   - Kullanıcı hesabı olacak ve hesabın iki türü olacak (üye, yönetici).
+   - Hesap bir yönetici tarafından onaylanana kadar herhangi bir işlem yapamayacak. (oylama, bileşen yükleme, bileşen görüntüleme gibi)
 
-3. Bileşen sistemi olacak.
+2. Bileşen sistemi olacak.
    - Onaylı kullanıcıların yükledikleri bileşenler anonim olarak görünecek.
    - Bileşenler kategoriye göre ayrılabilecek.
 
-4. Oylama sistemi olacak.
+3. Oylama sistemi olacak.
    - Kullanıcıların verdiği oylar anonim olarak gözükecek.
    - Kullanıcılar bir bileşene sadece bir defa oy verebilecek.
 
-5. Eğer kullanıcı bir yöneticiyse,
+4. Eğer kullanıcı bir yöneticiyse,
    - Kullanıcıları onaylayıp/reddetme yetkisine sahip olacak.
    - Bileşenleri yönetip, onaylayabilecek.
 
