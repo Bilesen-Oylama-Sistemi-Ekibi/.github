@@ -1,5 +1,5 @@
 # Proje Hakkında
-Bu proje, gelecekteki ortak çalışmalarda kullanılacak bir ortam geliştirmeyi amaçlamaktadır. İki aşamalı bir yaklaşım kullanılarak gerçekleştirilecektir. İlk aşamada, Django kullanarak bir bileşen oylama sistemi geliştirilecektir. İkinci aşamada ise en yüksek oyu alan bileşenler kullanılarak Bootstrtap benzeri bir framework oluşturulacaktır.
+Bu proje, gelecekteki ortak çalışmalarda kullanılacak bir ortam geliştirmeyi amaçlamaktadır. İki aşamalı bir yaklaşım kullanılarak gerçekleştirilecektir. İlk aşamada, Django kullanarak bir bileşen oylama sistemi geliştirilecektir. İkinci aşamada ise en yüksek oyu alan bileşenler kullanılarak Bootstrap benzeri bir framework oluşturulacaktır.
 
 ## Toplantı Tarihleri
 1. 27.05.2024 Pazartesi
